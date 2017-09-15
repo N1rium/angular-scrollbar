@@ -6,7 +6,7 @@ Simply add ```scrollbar``` as an attribute to the desired element e.g:
 ```html
 <div class="scrollable-container" scrollbar></div>
 ```
-The element will then generate a child element ```<scroll></scroll>``` 
+The element will then generate a child element ```<scrollbar></scrollbar>```
 which will be given a default set of css rules:
 ```css
 position: absolute;
@@ -14,7 +14,7 @@ top: 0;
 ```
 You are then free to customize it just like any other element with regular css like so:
 ```css
-scroll {
+scrollbar {
     /* Regular css here */
 }
 ```

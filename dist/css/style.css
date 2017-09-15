@@ -31,7 +31,7 @@ body, html {
     margin: 20px 0px;
 }
 
-.scroll-container scroll {
+.scroll-container scrollbar {
     width: 10px;
     height: 10px;
     background: blue;

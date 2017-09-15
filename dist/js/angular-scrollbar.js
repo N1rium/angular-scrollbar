@@ -9,7 +9,7 @@ angular.module("Scrollbar", []).directive("scrollbar", ['$compile', '$window', f
             var e = element[0];
 
             /* Add scroll child element */
-            var scrollElement = $compile("<scroll></scroll>")(scope);
+            var scrollElement = $compile("<scrollbar></scrollbar>")(scope);
             element.append(scrollElement);
 
             /* Initial necessary css */
