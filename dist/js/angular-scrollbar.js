@@ -24,7 +24,7 @@ angular.module("Scrollbar", []).directive("scrollbar", ['$compile', '$window', f
             /* Recalculate on scroll */
             element.bind("scroll", calc);
 
-            /* Recalculate as soon as the relative element is created */
+            /* Recalculate as soon as this element is created */
             element.ready(calc);
 
             /* Recalculate when window is resized */
