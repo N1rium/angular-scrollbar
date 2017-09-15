@@ -22,6 +22,7 @@ For ```-webkit``` browsers you can simply disable the already rendered scrollbar
 ```css
 ::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {
   visibility: hidden;
+  height: 0;
   width: 0;
 }
 ```
