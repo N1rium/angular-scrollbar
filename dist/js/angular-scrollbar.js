@@ -1,3 +1,4 @@
+"use strict";
 angular.module("Scrollbar", []).directive("scrollbar", ['$compile', '$window', function($compile, $window) {
 
     return {
