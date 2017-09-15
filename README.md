@@ -26,3 +26,6 @@ For ```-webkit``` browsers you can simply disable the already rendered scrollbar
   width: 0;
 }
 ```
+
+## Todo
+As of now, this only helps with ```-webkit``` based browsers. A goal is to make a neat and clean solution for both IE and FF too.
