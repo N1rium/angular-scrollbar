@@ -13,7 +13,7 @@ angular.module("Scrollbar", []).directive("scrollbar", ['$compile', '$window', f
             element.append(scrollElement);
 
             /* Initial necessary css */
-            scrollElement.css({"position" : "absolute", "top" : "0"});
+            scrollElement.css({"position" : "absolute"});
 
             /* Calculates position and height of the scrollbar */
             function calc() {
