@@ -36,4 +36,10 @@ body, html {
     height: 10px;
     background: blue;
     right: 0;
+    opacity: 0;
+    transition: opacity 0.333s ease;
+}
+
+.scroll-container scrollbar.scrolling {
+    opacity: 1;
 }
