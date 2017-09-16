@@ -18,6 +18,13 @@ scrollbar {
     /* Regular css here */
 }
 ```
+While the user is scrolling, the element will gain a class called ```scrolling``` which may help
+to customize the scrollbar even further (perhaps a fade in/out effect):
+```css
+scrollbar.scrolling {
+    /* Css to apply while scrolling  */
+}
+```
 For ```-webkit``` browsers you can simply disable the already rendered scrollbar with the following:
 ```css
 ::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {
