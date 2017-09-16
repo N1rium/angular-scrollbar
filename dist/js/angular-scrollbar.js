@@ -1,9 +1,15 @@
 "use strict";
-angular.module("Scrollbar", []).directive("scrollbar", ['$compile', '$window', function($compile, $window) {
+angular.module("Scrollbar", []).directive("scrollbar", ['$compile', '$window', '$timeout', function($compile, $window, $timeout) {
 
     return {
         restrict: "A",
         link: function(scope, element, attrs) {
+
+            /* Handles $timeout to determine when scroll ends */
+            var timeout = null;
+
+            /* Time until scroll stop simulation kicks in */
+            var timeoutDelay = 180;
 
             /* Shorthand reference */
             var e = element[0];
@@ -21,8 +27,20 @@ angular.module("Scrollbar", []).directive("scrollbar", ['$compile', '$window', f
                 "height" : e.clientHeight * e.clientHeight / e.scrollHeight + "px"});
             }
 
+            /* Adds class to <scrollbar> element while scrolling */
+            function addClass() {
+                $timeout.cancel(timeout);
+                scrollElement.addClass("scrolling");
+                timeout = $timeout(function() {
+                    scrollElement.removeClass("scrolling");
+                }, timeoutDelay);
+            }
+
             /* Recalculate on scroll */
             element.bind("scroll", calc);
+
+            /* Handle class modification on scroll */
+            element.bind("scroll", addClass);
 
             /* Recalculate as soon as this element is created */
             element.ready(calc);
