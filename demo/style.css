@@ -11,10 +11,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  background-color: #21252b;
-  color: #d7dae0;
-  font-family: 'Droid sans', sans-serif;
-  width: 100%;
+  background: #f4f7f6;
   height: 100%;
   overflow: hidden;
 }
@@ -27,17 +24,23 @@ body, html {
 
 .scroll-container > div {
     height: 200px;
-    background: #3c3c3c;
-    margin: 20px 0px;
+    background: #673AB7;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.scroll-container > div:nth-child(2n+0) {
+    width: 100%;
 }
 
 .scroll-container scrollbar {
-    width: 10px;
-    height: 10px;
-    background: blue;
-    right: 0;
+    width: 8px;
+    right: 2px;
     opacity: 0;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
     transition: opacity 0.333s ease;
+    border: 1px solid rgba(152, 152, 152, 0.5);
 }
 
 .scroll-container scrollbar.scrolling {
