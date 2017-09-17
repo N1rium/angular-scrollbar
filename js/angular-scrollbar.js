@@ -9,7 +9,7 @@ angular.module("Scrollbar", []).directive("scrollbar", ['$compile', '$window', '
             var timeout = null;
 
             /* Time until scroll stop simulation kicks in */
-            var timeoutDelay = 180;
+            var timeoutDelay = 580;
 
             /* Shorthand reference */
             var e = element[0];
